@@ -47,35 +47,56 @@
   </div>
 
   <div class="section">
+    <h2>QR Code</h2>
+    <img src="qr-code.png">
+  </div>
+
+  <div class="section">
     <h2>Q&A</h2>
-    <p><strong>Web1:</strong> Static, read-only content. Users are just viewers.</p>
-    <p><strong>Web2:</strong> Interactive, user-generated content (e.g., Facebook, YouTube).</p>
-    <p><strong>Web3:</strong> Decentralized, blockchain-based, users own their data and identity.</p>
-    <p><em>Use Case:</em> Searching "side effects of medicine":<br>
-    - Web1: Static article.<br>
-    - Web2: Forums, comments, personalized videos.<br>
-    - Web3: Verified info from decentralized health databases.</p>
+    <p>The evolution from Web1 to Web2 and finally to Web3 reflects a significant shift in how we consume, create, and manage content on the internet.
+      In Web1, which began in the 1990s, the primary use was reading content (Read). Websites during this period were static and consisted of simple, personal information pages. Users could not influence or interact with the content, and control was centralized, managed by the companies that created the sites.
+      With the transition to Web2, the internet became more dynamic and interactive. Users not only read content but also create and share it (Read-Write). Examples include social networks, blogs, and sharing platforms like YouTube and Facebook. Despite this interactivity, control over content remained relatively centralized and was held by large tech companies such as Google and Meta. Web3, the next generation of the internet, is characterized by a decentralized approach and user ownership (Read-Write-Own). Content is managed and verified by users through blockchain technology and Decentralized Autonomous Organizations (DAO). Users have control over their personal information, without relying on a central authority.</p>
+    <p><em>Use Case:</em> Searching "Online Shopping Experience":<br>
+     <strong> Web1: </strong> In Web1, online shopping was mostly limited to static catalogs on company websites. Users could browse product listings, view basic information, and then call or fax to place an order. There was no interactive experience or user-generated content. For example, buying a book involved visiting a static page with a list of available titles, without reviews or personalized recommendations.
+
+     <strong> Web2: </strong>
+In Web2, the shopping experience became highly interactive. E-commerce platforms like Amazon not only display product information but also allow users to leave reviews, rate products, and receive personalized recommendations. Social media integration enables users to share their purchases and see what friends recommend. Payments are handled directly through secure online gateways.
+
+<strong> Web2: </strong>
+In Web3, shopping takes place on decentralized marketplaces. Users can buy products using cryptocurrencies via smart contracts that ensure secure and transparent transactions without intermediaries. Additionally, users can own and trade digital assets directly, such as NFTs (Non-Fungible Tokens), representing limited edition or exclusive products. The control of data and transaction records lies with the users rather than centralized e-commerce platforms.
   </div>
 
   <div class="section">
     <h2>Contact Me</h2>
-    <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+    <form id="contactForm">
       <label>Your Email:</label>
-      <input type="email" name="email" required />
-      
+      <input type="email" id="email" required />
       <label>Choose a smiley:</label>
-      <select name="smiley">
-        <option value=":)">🙂</option>
-        <option value=":D">😄</option>
-        <option value=":)">😊</option>
+      <select id="smiley">
+        <option value="🙂">🙂</option>
+        <option value="😄">😄</option>
+        <option value="😊">😊</option>
       </select>
-
       <label>Your Message:</label>
-      <textarea name="message" rows="4" required></textarea>
-
-      <input type="submit" value="Send" />
+      <textarea id="message" rows="4" required></textarea>
+      <button type="button" onclick="sendEmail()">Send</button>
     </form>
   </div>
+  
+  <script>
+  function sendEmail() {
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const smiley = document.getElementById('smiley').value;
+    const subject = 'New Message from Contact Form';
+  
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%20${encodeURIComponent(smiley)}`;
+  
+    window.open(mailtoLink, '_blank');
+  }
+  </script>
+  
+  
 
 </body>
 </html>
