@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
@@ -189,5 +189,88 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paul McCartney Tribute</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f2f2f2; }
+    h1, h2 { color: #2c3e50; }
+    .section { background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+    iframe { width: 100%; max-width: 560px; height: 315px; border-radius: 10px; }
+    button { padding: 10px 20px; font-size: 16px; background-color: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    form { display: flex; flex-direction: column; max-width: 400px; }
+    input, textarea, select { margin-bottom: 10px; padding: 8px; font-size: 14px; border-radius: 5px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Paul McCartney Tribute Website</h1>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Hi, I’m Paul McCartney. Born in Liverpool in 1942, I became known as one of the founding members of The Beatles. After the Beatles disbanded, I formed Wings and continued a successful solo career. I’ve written over 1,000 songs, won 18 Grammys, and was knighted by Queen Elizabeth II. I love songwriting, painting, and spending time with my family. My mother, Mary McCartney, was a huge influence on me.</p>
+  </div>
+
+  <div class="section">
+    <h2>My Photos</h2>
+    <img src="images/young_paul.jpg" alt="Young Paul McCartney">
+    <img src="images/beatles_paul.jpg" alt="Paul with The Beatles">
+    <img src="images/paul_today.jpg" alt="Paul McCartney Today">
+  </div>
+
+  <div class="section">
+    <h2>My Playlist</h2>
+    <iframe src="https://www.youtube.com/embed/QDYfEBY9NM4" title="Let It Be - The Beatles" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>Like</h2>
+    <button onclick="likeFunction()">👍 Like</button>
+    <p id="like-count">0 Likes</p>
+    <script>
+      let count = 0;
+      function likeFunction() {
+        count++;
+        document.getElementById("like-count").innerText = count + " Likes";
+      }
+    </script>
+  </div>
+
+  <div class="section">
+    <h2>Q&A</h2>
+    <p><strong>Web1:</strong> Static, read-only content. Users are just viewers.</p>
+    <p><strong>Web2:</strong> Interactive, user-generated content (e.g., Facebook, YouTube).</p>
+    <p><strong>Web3:</strong> Decentralized, blockchain-based, users own their data and identity.</p>
+    <p><em>Use Case:</em> Searching "side effects of medicine":<br>
+    - Web1: Static article.<br>
+    - Web2: Forums, comments, personalized videos.<br>
+    - Web3: Verified info from decentralized health databases.</p>
+  </div>
+
+  <div class="section">
+    <h2>Contact Me</h2>
+    <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+      <label>Your Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Choose a smiley:</label>
+      <select name="smiley">
+        <option value=":)">🙂</option>
+        <option value=":D">😄</option>
+        <option value=":)">😊</option>
+      </select>
+
+      <label>Your Message:</label>
+      <textarea name="message" rows="4" required></textarea>
+
+      <input type="submit" value="Send" />
+    </form>
+  </div>
 </body>
 </html>
