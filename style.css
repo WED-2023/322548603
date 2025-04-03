@@ -1,7 +1,160 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+html {
+    scroll-padding-top: 220px; /* Adjust according to your menu height */
+    scroll-behavior: smooth; /* For smooth scrolling */
 }
+table{
+	border-collapse: collapse;
+	width: 100%;
+	margin: 5px;
+	font-size: 1em;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	/* overflow: hidden; */
+}
+
+#menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 95%;
+	top: 20px;
+	right: 20px;
+	left: 20px;
+	background-color: #f6f6f6;
+	color: white;
+	padding: 5px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu a {
+	color: #2c3e50;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+	margin: 5px 0;
+	/* flex: 1; */
+}
+
+#menu a:hover {
+	background-color: #635f5f;
+	color: #d4d6d7;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+} 
+
+#menu a.active {
+	background-color: #a8a8a8;
+	color: white;
+}
+
+#menu h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+body { 
+	font-family: 'Trebuchet MS', sans-serif;
+	margin: 35px; background-color: #e1e1e1; 
+	padding-top: 50px;
+  }
+  
+h1{
+	color: #2c3e50; 
+	font-weight: bold;
+	font-size: 3em;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+	padding: 10px;
+  }
+
+  h2 { 
+	color: #2c3e50; 
+	font-weight: bold;
+	font-size: 2em;
+	text-align: left;
+  }
+  h3 {
+	color: #0057b8;
+  }
+
+  p {
+	font-size: 1.05em;
+	line-height: 1.6em;
+  }
+  
+  .section { 
+	/* background: rgb(238, 238, 238); 
+	padding: 20px;  */
+	margin-bottom: 10px; 
+	border-radius: 10px; 
+	/* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+
+  }
+  
+  /* img { 
+	max-width: 33%;
+	height: auto;
+	border-radius: 20px; 
+  } */
+
+  img {
+	margin: 10px;
+	border-radius: 8px;
+	transition: transform 0.3s ease;
+  }
+
+  img:hover {
+	transform: scale(1.05);
+  }
+
+  
+  iframe { 
+	  width: 100%;
+	  max-width: 560px;
+	  height: 315px;
+	  border-radius: 10px; 
+  }
+  
+  button { 
+	  padding: 10px 20px; 
+	  font-size: 16px; 
+	  background-color: #3498db; 
+	  color: white; 
+	  border: none; 
+	  border-radius: 5px; 
+	  cursor: pointer;
+  }
+  
+  form { 
+	  display: flex; 
+	  flex-direction: column; 
+	  max-width: 400px; 
+  }
+  
+  input, textarea, select { 
+	  margin-bottom: 10px; 
+	  padding: 8px; 
+	  font-size: 16px; 
+	  border-radius: 5px; 
+	  border: 1px solid #ccc; 
+  }
+
+.collage {
+	display: flex;
+	justify-content: center;    	
+	flex-wrap: wrap; 	
+}
+
+    
