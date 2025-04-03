@@ -1,197 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
-<section id="about" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
-
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
-</section>
-
-
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,6 +16,12 @@ $(function(){
   </style>
 </head>
 <body>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" 
+    nonce="VZd0C3kT"></script>
+
   <h1>Paul McCartney Tribute Website</h1>
 
   <div class="section">
@@ -219,9 +31,9 @@ $(function(){
 
   <div class="section">
     <h2>My Photos</h2>
-    <img src="images/young_paul.jpg" alt="Young Paul McCartney">
-    <img src="images/beatles_paul.jpg" alt="Paul with The Beatles">
-    <img src="images/paul_today.jpg" alt="Paul McCartney Today">
+    <img src="Early_paul.jpeg" alt="Young Paul McCartney">
+    <img src="Beatles_-_Abbey_Road.jpg" alt="Paul with The Beatles">
+    <img src="Paul-McCartney-2022-billboard-1548.webp" alt="Paul McCartney Today">
   </div>
 
   <div class="section">
@@ -231,15 +43,7 @@ $(function(){
 
   <div class="section">
     <h2>Like</h2>
-    <button onclick="likeFunction()">👍 Like</button>
-    <p id="like-count">0 Likes</p>
-    <script>
-      let count = 0;
-      function likeFunction() {
-        count++;
-        document.getElementById("like-count").innerText = count + " Likes";
-      }
-    </script>
+    <div class="fb-like" data-href="https://www.facebook.com/PaulMcCartney" data-width="" data-layout="standard" data-action="like" data-size="large" data-share="true"></div>
   </div>
 
   <div class="section">
@@ -258,7 +62,7 @@ $(function(){
     <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
       <label>Your Email:</label>
       <input type="email" name="email" required />
-
+      
       <label>Choose a smiley:</label>
       <select name="smiley">
         <option value=":)">🙂</option>
@@ -272,5 +76,6 @@ $(function(){
       <input type="submit" value="Send" />
     </form>
   </div>
+
 </body>
 </html>
