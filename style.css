@@ -1,8 +1,42 @@
 html {
-    scroll-padding-top: 220px; /* Adjust according to your menu height */
-    scroll-behavior: smooth; /* For smooth scrolling */
+	scroll-padding-top: 170px; 
+	scroll-behavior: smooth;
 }
-table{
+
+body {
+	font-family: 'Trebuchet MS', sans-serif;
+	margin: 35px;
+	background-color: #e1e1e1;
+	padding-top: 50px;
+}
+
+h1 {
+	color: #2c3e50;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	/* margin-bottom: 20px;
+	padding: 10px; */
+}
+
+h2 {
+	color: #2c3e50;
+	font-weight: bold;
+	font-size: 1.75em;
+	text-align: left;
+}
+
+h3 {
+	color: #0057b8;
+}
+
+p {
+	font-size: 1.05em;
+	line-height: 1.6em;
+}
+
+table {
 	border-collapse: collapse;
 	width: 100%;
 	margin: 5px;
@@ -26,6 +60,7 @@ table{
 	padding: 5px;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
 }
 
 #menu a {
@@ -43,12 +78,11 @@ table{
 	background-color: #635f5f;
 	color: #d4d6d7;
 	font-weight: bold;
-	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	transition: all 0.3s ease;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-} 
+}
 
 #menu a.active {
 	background-color: #a8a8a8;
@@ -56,105 +90,159 @@ table{
 }
 
 #menu h2 {
-    margin: 0;
-    color: #2c3e50;
-    font-size: 20px;
-    font-weight: bold;
+	margin: 0;
+	color: #2c3e50;
+	font-size: 20px;
+	font-weight: bold;
 }
 
+.section {
+	/* background: rgb(238, 238, 238); */
+	/* padding: 20px; */
+	margin-bottom: 10px;
+	border-radius: 10px;
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
 
-body { 
-	font-family: 'Trebuchet MS', sans-serif;
-	margin: 35px; background-color: #e1e1e1; 
-	padding-top: 50px;
-  }
-  
-h1{
-	color: #2c3e50; 
-	font-weight: bold;
-	font-size: 3em;
-	text-align: center;
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-	margin-bottom: 20px;
-	padding: 10px;
-  }
+.photos { 						/*This is the block that wraps all the picture cards.*/
+	display: flex;
+	justify-content: center;    	/* Center the items horizontally */
+	flex-wrap: wrap; 		    	/* Allow items to wrap to the next line */
+}
 
-  h2 { 
-	color: #2c3e50; 
-	font-weight: bold;
-	font-size: 2em;
-	text-align: left;
-  }
-  h3 {
-	color: #0057b8;
-  }
-
-  p {
-	font-size: 1.05em;
-	line-height: 1.6em;
-  }
-  
-  .section { 
-	/* background: rgb(238, 238, 238); 
-	padding: 20px;  */
-	margin-bottom: 10px; 
-	border-radius: 10px; 
-	/* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
-
-  }
-  
-  /* img { 
-	max-width: 33%;
-	height: auto;
-	border-radius: 20px; 
-  } */
-
-  img {
+img, card img{
 	margin: 10px;
 	border-radius: 8px;
 	transition: transform 0.3s ease;
-  }
-
-  img:hover {
-	transform: scale(1.05);
-  }
-
-  
-  iframe { 
-	  width: 100%;
-	  max-width: 560px;
-	  height: 315px;
-	  border-radius: 10px; 
-  }
-  
-  button { 
-	  padding: 10px 20px; 
-	  font-size: 16px; 
-	  background-color: #3498db; 
-	  color: white; 
-	  border: none; 
-	  border-radius: 5px; 
-	  cursor: pointer;
-  }
-  
-  form { 
-	  display: flex; 
-	  flex-direction: column; 
-	  max-width: 400px; 
-  }
-  
-  input, textarea, select { 
-	  margin-bottom: 10px; 
-	  padding: 8px; 
-	  font-size: 16px; 
-	  border-radius: 5px; 
-	  border: 1px solid #ccc; 
-  }
-
-.collage {
-	display: flex;
-	justify-content: center;    	
-	flex-wrap: wrap; 	
+	width: 250px;   
+    height: 250px;   
+    object-fit: cover;
+	z-index: 1;  
 }
 
-    
+img:hover, .card img:hover {
+	transform: scale(1.05);
+	z-index: 0;
+}
+
+.photos { 						
+	display: flex;
+	justify-content: center;    	
+	flex-wrap: wrap; 		    	
+}
+
+iframe {
+	width: 100%;
+	max-width: 560px;
+	height: 315px;
+	border-radius: 10px;
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #3498db;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#like {
+	display: flex;
+	flex-direction: column;   
+	align-items: center;      
+	gap: 10px;                
+	margin-top: 20px;
+	padding: 20px;
+	background-color: #b7cee8;
+	border-radius: 10px;
+}
+
+#like-button {
+	background-color: #0057b8;
+	color: white;
+	font-size: 1em;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+  
+#like-button:hover {
+	background-color: #004a9f;
+}
+
+form label {
+	display: block;             
+	font-weight: bold;
+	margin-bottom: 5px;        
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="message"],
+  form textarea {
+	width: 100%;                
+	padding: 10px;              
+	margin-bottom: 15px;       
+	font-size: 1.1em;  			
+	border-radius: 6px;        
+  }
+  
+  form button {
+	background-color: #0057b8;  
+	color: white;               
+	padding: 10px 20px;         
+	border-radius: 6px;         
+	cursor: pointer;            
+  }
+  
+  .emoji-options {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 10px 0 20px;
+  }
+  
+  .emoji-options label {
+	cursor: pointer;
+	font-size: 1.5rem;
+	border: 2px solid #ccc;
+	border-radius: 8px;
+	padding: 8px 12px;
+	transition: 0.3s ease;
+	user-select: none;
+  }
+  
+.emoji-options label:hover {
+	background-color: #f0f0f0;
+	transform: scale(1.1);
+}
+
+  
+.emoji-options input[type="radio"]:checked + label {
+	background-color: #0057b8;
+	color: white;
+	border-color: #0057b8;
+	transform: scale(1.1);
+}
+
+/* form {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+} */
+
+input,
+textarea,
+select {
+	margin-bottom: 10px;
+	padding: 8px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+
